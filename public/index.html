@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Home Page of my website</title>
+</head>
+
+<body>
+
+ <h1>Home Page </h1>
+
+
+<div>
+  <h2>Upload Bill</h2>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="bill" required />
+    <button type="submit">Upload</button>
+  </form>
+</div>
+
+<div class="newsletter-page">
+
+  <!-- LEFT SIDE: Already Signed Users -->
+  <div class="subscribers-list">
+    <h2>Already Subscribed</h2>
+
+    <!-- Example static data (later this will come from DB) -->
+    <div class="subscriber">
+      <p><strong>Rahul Sharma</strong></p>
+      <p>rahul@gmail.com</p>
+    </div>
+
+    <div class="subscriber">
+      <p><strong>Anita Desai</strong></p>
+      <p>anita@gmail.com</p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE: Signup Form -->
+  <div class="signup-form">
+    <h2>Newsletter Signup</h2>
+
+    <form action="/subscribe" method="post">
+      <input type="text" name="firstName" placeholder="First Name" required />
+
+      <input type="text" name="lastName" placeholder="Last Name" required />
+
+      <input type="email" name="email" placeholder="Email Address" required />
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+</div>
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
