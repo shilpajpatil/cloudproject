@@ -44,7 +44,7 @@ app.post("/upload", upload.single("bill"), async (req, res) => {
       Body: fs.createReadStream(req.file.path),
     };
 
-    //await s3.upload(params).promise();
+    await s3.upload(params).promise();
 
     fs.unlinkSync(req.file.path); // remove temp file
 
